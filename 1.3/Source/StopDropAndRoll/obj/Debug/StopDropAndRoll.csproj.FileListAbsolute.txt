@@ -1,0 +1,17 @@
+c:\GAMES\Rimworld\Mods\StopDropAndRoll\1.2\Source\StopDropAndRoll\bin\Debug\StopDropAndRoll.dll
+c:\GAMES\Rimworld\Mods\StopDropAndRoll\1.2\Source\StopDropAndRoll\bin\Debug\StopDropAndRoll.pdb
+c:\GAMES\Rimworld\Mods\StopDropAndRoll\1.2\Source\StopDropAndRoll\bin\Debug\0Harmony.dll
+c:\GAMES\Rimworld\Mods\StopDropAndRoll\1.2\Source\StopDropAndRoll\obj\Debug\StopDropAndRoll.csprojAssemblyReference.cache
+c:\GAMES\Rimworld\Mods\StopDropAndRoll\1.2\Source\StopDropAndRoll\obj\Debug\StopDropAndRoll.csproj.CoreCompileInputs.cache
+c:\GAMES\Rimworld\Mods\StopDropAndRoll\1.2\Source\StopDropAndRoll\obj\Debug\StopDropAndRoll.csproj.CopyComplete
+c:\GAMES\Rimworld\Mods\StopDropAndRoll\1.2\Source\StopDropAndRoll\obj\Debug\StopDropAndRoll.dll
+c:\GAMES\Rimworld\Mods\StopDropAndRoll\1.2\Source\StopDropAndRoll\obj\Debug\StopDropAndRoll.pdb
+c:\GAMES\Rimworld\Mods\StopDropAndRoll\1.2\Assemblies\StopDropAndRoll.dll
+c:\GAMES\Rimworld\Mods\StopDropAndRoll\1.2\Assemblies\StopDropAndRoll.pdb
+L:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\StopDropAndRoll\1.3\Assemblies\StopDropAndRoll.dll
+L:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\StopDropAndRoll\1.3\Assemblies\StopDropAndRoll.pdb
+L:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\StopDropAndRoll\1.3\Source\StopDropAndRoll\obj\Debug\StopDropAndRoll.csprojAssemblyReference.cache
+L:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\StopDropAndRoll\1.3\Source\StopDropAndRoll\obj\Debug\StopDropAndRoll.csproj.CoreCompileInputs.cache
+L:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\StopDropAndRoll\1.3\Source\StopDropAndRoll\obj\Debug\StopDropAndRoll.csproj.CopyComplete
+L:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\StopDropAndRoll\1.3\Source\StopDropAndRoll\obj\Debug\StopDropAndRoll.dll
+L:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\StopDropAndRoll\1.3\Source\StopDropAndRoll\obj\Debug\StopDropAndRoll.pdb

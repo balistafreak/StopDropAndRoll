@@ -1,0 +1,2 @@
+E:\Rimworld Modding\StopDropAndRoll\obj\Debug\StopDropAndRoll.csprojAssemblyReference.cache
+E:\Rimworld Modding\StopDropAndRoll\obj\Debug\StopDropAndRoll.csproj.CoreCompileInputs.cache

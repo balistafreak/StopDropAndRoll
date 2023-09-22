@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SDR.IRS>每1%的熱能護甲的抗點燃強度（IRS） </SDR.IRS>
+  <SDR.MHA>抗點燃最低熱能護甲（MHA）</SDR.MHA>
+  <SDR.EnableOnColonists>禁用殖民者的著火恐慌</SDR.EnableOnColonists>
+  <SDR.EnableOnNonColonists>禁用非殖民者的著火恐慌</SDR.EnableOnNonColonists>
+  <SDR.EnableOnAnimals>禁用動物的著火恐慌</SDR.EnableOnAnimals>
+  <SDR.EnableOnColonists2>在殖民者身上啟用“點燃幾率”系統</SDR.EnableOnColonists2>
+  <SDR.EnableOnNonColonists2>在非殖民者身上啟用“點燃幾率”系統</SDR.EnableOnNonColonists2>
+  <SDR.EnableOnAnimals2>在動物身上啟用“點燃幾率”系統</SDR.EnableOnAnimals2>
+  <SDR.Reset>重設為默認值</SDR.Reset>
+</LanguageData>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+
+	<name>Stop, Drop, And Roll! [BAL]</name>
+	<author>balistafreak</author>
+	<supportedVersions>
+		<li>1.2</li>
+		<li>1.3</li>
+		<li>1.4</li>
+	</supportedVersions>
+	<packageId>balistafreak.StopDropAndRoll</packageId>
+	<description>[h1]Changelog[/h1]
+20 July 2022: Mod recompiled to work with 1.4.
+5 July 2021: Mod marked as compatible with 1.3. Mod appears to function with zero changes necessary, but please report any errors you encounter ASAP!
+28 Jan 2021: Simplified and Traditional Chinese translations added, courtesy of [url=https://steamcommunity.com/profiles/76561198412879575]Zephyr[/url] and [url=https://steamcommunity.com/id/leafzxg]leafzxg[/url]!
+15 Jan 2021: Mod launched!
+
+[h1]What this mod does[/h1]
+Sick and tired of having your carefully designed defenses for your pawns completely thrown into chaos by a single raider with a molotov cocktail? Groaning in frustration when one hit from an inferno cannon, a hit that does exactly zero damage to your legendary-armored pawns, causes them to run [b]TOWARDS[/b] the line of approaching Centipedes just because there's a one-tile puddle of water out in the open?
+
+Teach your pawns to Stop, Drop, and Roll! This mod replaces the default "panic from fire" behavior of your colonists with a more intelligent one: the pawn stops whatever they're currently doing [b]NOT[/b] to run around uselessly or towards water, but to focus on extinguishing themselves on the spot. If you feel like fire is too effective of a weapon against your foes, you can optionally enable this behavior on non-colonist pawns and even animals; or, if you want to rely solely on the second system introduced by this mod, that of "IgnitionChance", you can disable this behavior on your own pawns as well.
+
+Additionally, apparel and its Heat Armor now assist with fire prevention. Heat Armor above a certain threshold on apparel is used to calculate a new value called "IgnitionChance", which serves to reduce the chance a pawn would be set on fire. By default, all pawns (including enemies) and animals benefit from this new system, but if you're feeling sadistic, you can disable this for enemies and/or animals. You can also disable it for your own colonists, if you'd rather rely solely on the "stop, drop, and roll" mechanic… and if you're feeling masochistic, you can disable the IgnitionChance system for just your own colonists while keeping it active for non-colonists and animals. Everything is modifiable and customizable in the mod options window!
+
+[h1]Hard numbers[/h1]
+Rimworld's code uses a single method to set pawns on fire. Whenever this method is used, this mod patches it to first be checked by a series of calculations similar to (but not identical to) how attacks are resolved against armor.
+
+The mod starts with two predefined but user-modifiable values: "Ignition resistance strength" (IRS) and "Minimum heat armor rating to resist ignition" (MHA). By default, these are "4" and "0.25", respectively.
+
+The first step when the game code attempts to set a pawn on fire is that a outside-depth body part (aka, not an internal organ such as the heart or brain, but possibly an outside-depth sub-part such as eyes, nose, or jaw) is randomly selected, using the exact same process as how regular attacks select a body part. (Because the base game is dumb and doesn't protect hands and feet by default, hands and feet have been excluded from this roll.)
+
+Next, all layers of apparel covering that body part are checked from outermost to innermost. Each layer of apparel has a calculated "IgnitionChance" that equals 100% - IRS(Heat Armor of Apparel - MHA).
+
+A random roll between 0 and 100 is now made and compared to IgnitionChance. If the roll is greater than ignition chance, that layer of apparel has resisted ignition and the pawn is not set on fire. If the roll is less than or equal to IgnitionChance, then that layer of apparel has failed to prevent the pawn from catching on fire, and the process moves to the next layer of apparel. If there are no layers of apparel remaining (or none to begin with), the pawn catches fire as normal.
+
+With the default values of 4 and 0.25 for IRS and MHA, this means that any value of Heat Armor on apparel less than 25% does not contribute to reducing IgnitionChance, while every percent of Heat Armor above 25% reduces IgnitionChance's base chance of 100% by 4%. A piece of apparel with 26% Heat Armor has a 96% IgnitionChance, while one with 49% Heat Armor has a 4% IgnitionChance. For reference, all base game apparel made of Devilstrand easily reaches >50% Heat Armor at normal quality, making it a completely "fireproof" layer. Marine armor is in a similar position, having 54% Heat Armor at normal quality. Note that while hands and feet have been excluded, the head and the face are their own body parts! An open-faced helmet risks your pawn being set on fire still on an unlucky roll to determine body part, and you will need a Marine helmet or equivalent in conjunction with clothing to fully fireproof your pawns.
+
+Depending on the way apparel attributes are balanced in your mod-list, the default values of 4 and 0.25 for IRS and MHA may not be appropriate. If your mod-list's point of balance is very different from that of the base game, and you're rolling with extremely powerful armor, or perhaps focusing on a low-tech playthrough, raising or lowering these values may be required.
+
+Note that IgnitionChance is an entirely separate process from direct weapon damage, which uses Heat Armor as normal. Even if a pawn's body parts are all covered in apparel with 0% IgnitionChance, direct hits from incendiary weapons will still attempt to deal direct damage as normal, opposed by Heat Armor.
+
+I don't even want to think about CE compatibility. You guys are on your own.
+
+[h1]How will this mod affect my gameplay?[/h1]
+With the default settings, fire becomes way less of an instant "I lose" problem for your own colony, while also becoming somewhat less of an instant "I win" button to use against certain enemies. Although non-colonists (aka enemy pawns) do not use the "stop, drop, and roll" behavior, they do still benefit from the IgnitionChance system. Most tribal attire will still be well below the (default) MHA needed to decrease IgnitionChance, so you can still have your war crimes against the indigenous peoples of your rimworld, but pirates and outlanders in power armor may be sufficiently geared to shrug off incendiary assault.
+ 
+[h1]Tested With[/h1]
+Mod order seems to be irrelevant as long as it comes after Harmony and Core+Royalty. 
+
+Stop, Drop, and Roll! was not tested for compatibility with others mods altering other pawn behaviors. You have been warned.
+
+[h1]About and Acknowledgments[/h1]
+Please let me know in the comments section if you encounter any problems with this mod. I have little experience with game modding and this mod's C# was coded entirely by the illustrious so any comments, feedback, and/or coding/implementation pointers are greatly appreciated.
+
+If you would like to show your support, please consider donating to my [url=https://ko-fi.com/balistafreak0436]Ko-fi page[/url]. Every penny I receive means I can spend less time on other work and more time on realizing mod ideas such as this one.
+
+If you're a fellow Rimworld modder, please do your part for inter-mod soft compatibility by making your mod's buildings Stuffable, as opposed to requiring exactly Steel or WoodLogs.
+
+[h1]A very big thanks to:[/h1]
+Taranchuk. He is extremely knowledgeable of Rimworld's C# inner workings, and was able to understand my vague, bumbling instructions and descriptions almost flawlessly to create an end-product that did nearly everything I wanted it to, and more than everything I needed it to.
+
+[url=https://ko-fi.com/balistafreak0436][img]https://i.imgur.com/THBzOXr.png[/img][/url]
+[url=https://discord.gg/7B7xqHh][img]https://i.imgur.com/cfoFEMA.png[/img][/url]</description>
+
+</ModMetaData>
