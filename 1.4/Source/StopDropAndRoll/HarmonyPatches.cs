@@ -20,26 +20,42 @@ namespace StopDropAndRoll
 		}
 	}
 
-	[HarmonyPatch(typeof(JobGiver_ExtinguishSelf), "TryGiveJob")]
+    [HarmonyPatch(typeof(JobGiver_JumpInWater), "TryGiveJob")]
+    public static class Patch_JobGiver_JumpInWater
+    {
+        private static bool Prefix(Pawn pawn, ref Job __result)
+        {
+            if (StopDropAndRollMod.settings.enableStopDropAndRollOnColonists && pawn.RaceProps.Humanlike && pawn.IsColonist)
+            {
+                return false;
+            }
+            if (StopDropAndRollMod.settings.enableStopDropAndRollOnNonColonists && pawn.RaceProps.Humanlike && !pawn.IsColonist)
+            {
+                return false;
+            }
+            if (StopDropAndRollMod.settings.enableStopDropAndRollOnAnimals && pawn.RaceProps.Animal)
+            {
+                return false;
+            }
+            return true;
+        }
+    }
+
+    [HarmonyPatch(typeof(JobGiver_ExtinguishSelf), "TryGiveJob")]
 	public static class Patch_TryGiveJob
 	{
 		private static bool Prefix(Pawn pawn, ref Job __result)
 		{
 			if (!StopDropAndRollMod.settings.enableStopDropAndRollOnColonists && pawn.RaceProps.Humanlike && pawn.IsColonist)
             {
-                Log.Message("Fail 1");
-
                 return true;
 			}
 			if (!StopDropAndRollMod.settings.enableStopDropAndRollOnNonColonists && pawn.RaceProps.Humanlike && !pawn.IsColonist)
             {
-                Log.Message("Fail 2");
-
                 return true;
 			}
 			if (!StopDropAndRollMod.settings.enableStopDropAndRollOnAnimals && pawn.RaceProps.Animal)
 			{
-				Log.Message("Fail 3");
 				return true;
 			}
 
