@@ -26,15 +26,20 @@ namespace StopDropAndRoll
 		private static bool Prefix(Pawn pawn, ref Job __result)
 		{
 			if (!StopDropAndRollMod.settings.enableStopDropAndRollOnColonists && pawn.RaceProps.Humanlike && pawn.IsColonist)
-			{
-				return true;
+            {
+                Log.Message("Fail 1");
+
+                return true;
 			}
 			if (!StopDropAndRollMod.settings.enableStopDropAndRollOnNonColonists && pawn.RaceProps.Humanlike && !pawn.IsColonist)
-			{
-				return true;
+            {
+                Log.Message("Fail 2");
+
+                return true;
 			}
 			if (!StopDropAndRollMod.settings.enableStopDropAndRollOnAnimals && pawn.RaceProps.Animal)
 			{
+				Log.Message("Fail 3");
 				return true;
 			}
 
