@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "fC+rhCNCMvtErRVAEzoj2r1Q4+XMn8Pqlh8Anb04EYBHtCxuTg+E7q8LSA6bKT0USzx8rIQrQhhzQdp8BttBHA==",
+  "success": true,
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\StopDropAndRoll\\1.5\\Source\\StopDropAndRoll\\StopDropAndRoll.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vova\\.nuget\\packages\\krafs.rimworld.ref\\1.5.4060-beta\\krafs.rimworld.ref.1.5.4060-beta.nupkg.sha512",
+    "C:\\Users\\Vova\\.nuget\\packages\\lib.harmony\\2.3.3\\lib.harmony.2.3.3.nupkg.sha512"
+  ],
+  "logs": []
+}
